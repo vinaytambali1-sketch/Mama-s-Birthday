@@ -1,0 +1,107 @@
+div1{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.message1{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 140px;
+}
+
+div2{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.message2{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 140px;
+}
+
+div3{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.message3{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 140px;
+}
+
+div4{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.message4{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 140px;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.balloon-side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.balloon-side.left {
+    left: 0;
+}
+
+.balloon-side.right {
+    right: 0;
+}
+
+.balloon-side span {
+    position: absolute;
+    bottom: -80px;
+    font-size: 35px;
+    animation: flyUp 9s linear infinite;
+}
+
+@keyframes flyUp {
+    from {
+        transform: translateY(0) rotate(-10deg);
+        bottom: -80px;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(10deg);
+        bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .balloon-side {
+        width: 40px;
+    }
+
+    .balloon-side span {
+        font-size: 23px;
+    }
+}

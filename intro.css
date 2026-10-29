@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro {
+    width: 90%;
+    min-height: 85vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 3px solid white;
+    border-radius: 30px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+}
+
+.hearts {
+    font-size: 35px;
+}
+
+h1 {
+    color: white;
+    font-size: clamp(35px, 7vw, 75px);
+    text-shadow: 3px 3px 8px #b83264;
+}
+
+.intro p {
+    color: white;
+    font-size: clamp(16px, 3vw, 25px);
+}
+
+.surprise-btn {
+    text-decoration: none;
+    color: #ff3675;
+    background: white;
+    padding: 20px 35px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.surprise-btn:hover {
+    transform: scale(1.1);
+    background: #fff0f5;
+}
+
+.bottom-text {
+    margin-top: 20px;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.balloon-side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.balloon-side.left {
+    left: 0;
+}
+
+.balloon-side.right {
+    right: 0;
+}
+
+.balloon-side span {
+    position: absolute;
+    bottom: -80px;
+    font-size: 35px;
+    animation: flyUp 9s linear infinite;
+}
+
+@keyframes flyUp {
+    from {
+        transform: translateY(0) rotate(-10deg);
+        bottom: -80px;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(10deg);
+        bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .balloon-side {
+        width: 40px;
+    }
+
+    .balloon-side span {
+        font-size: 23px;
+    }
+}
